@@ -10,10 +10,15 @@ clear all
 close all
 clc
 
+% Add path for model
+addpath('C:\Users\David\GitHub\co_culture_device\modeling\model')
+% Add path for data
+addpath('C:\Users\David\GitHub\co_culture_device\raw_data_and_plots')
+
 %% Calculate Experimental Values of Growth Ratio
 
 % Load Data
-file = 'C:\Users\David\GitHub\co-culture_modeling\data\2019-10-28 -- Syntrophic CoC.xlsx';
+file = 'Figure 5 and 7 -- Syntrophic CoC.xlsx';
 range = 'D28:BK412';
 [num,~,~] = xlsread(file,range);
 
