@@ -9,3 +9,5 @@ This repository contains code and data related to the BioMe device.
 /modeling/data - This directory contains the raw data for the syntrophic E. coli mutant co-culture experiment that was used for the computational modeling.
 
 /modeling/model - This directory contains the code for the computational model used in this work, written as a MATLAB function.
+
+/raw_data_and_plots - This directory contains all of the raw data and MATLAB scripts for generating all of the plots in the figures.
