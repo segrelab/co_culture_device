@@ -1,6 +1,10 @@
 # co_culture_device
 This repository contains code and data related to the BioMe device.
 
+/BioMe - Distribution Files - This directory contains relevant files for the development of the BioMe device.
+/BioMe - Distribution Files/Drawings - This directory contains PDF files of the technical drawings for the BioMe Base, Body, and Gasket parts.
+/BioMe - Distribution Files/Fabrication Files - This directory contains files for 3D printing of the Body and laser cutting of the Gasket parts.
+/BioMe - Distribution Files/Solidworks Files - This directory contains the SolidWorks computer aided drafting (CAD) files for the BioMe Base, Body, and Gasket parts.
 
 /modeling - This directory contains all of the information related to the computational modeling portion of the paper.
 
