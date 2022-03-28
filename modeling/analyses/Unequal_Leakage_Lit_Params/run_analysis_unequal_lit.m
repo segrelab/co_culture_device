@@ -11,9 +11,9 @@ close all
 clc
 
 % Add path for model
-addpath('C:\Users\David\GitHub\co_culture_device\modeling\model')
+addpath('../../model')
 % Add path for data
-addpath('C:\Users\David\GitHub\co_culture_device\raw_data_and_plots')
+addpath('../../../raw_data_and_plots')
 
 %% Calculate Experimental Values of Growth Ratio
 

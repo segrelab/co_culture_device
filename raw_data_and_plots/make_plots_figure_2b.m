@@ -2,6 +2,10 @@
 % y19m11d11
 % Read Data (Chemical Diffusion)
 
+% Note: the "fit" function used here is from the curve fitting toolbox,
+% this toolbox must be installed or else MATLAB will try to use the stats
+% function and give an error.
+
 clear all
 close all
 clc

@@ -10,7 +10,7 @@ clc
 fntsz = 12;
 
 % Add path to model
-addpath('C:\Users\David\GitHub\co_culture_device\modeling\model')
+addpath('../modeling/model/')
 
 %% Define Parameters
 % Kinetics (Harcombe et al. cell systems. 2014; Gosset, Microb. Cell Fact. 2005)
