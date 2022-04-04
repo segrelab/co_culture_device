@@ -151,10 +151,10 @@ for I = 1:size(D,1)
         end
         if rem(J,2) == 1 % left side
             m = '.';
-            ms = 15;
+            ms = 20;
         else % right side
             m = '>';
-            ms = 7;
+            ms = 10;
         end
         X = PS(floor((J-1)/2)+1);
         plot(X,D(I,J),'color',c,'marker',m,'markersize',ms)
@@ -196,9 +196,10 @@ LOG_MAT = [PS',l_m_D',l_s_D'];
 %% Save Figure
 figure(2)
 set(gcf,'renderer','painters')
-set(gca,'fontsize',14)
-xticks([0.03,0.1,0.2,0.4])
-xticklabels({'0.03','0.1','0.2','0.4'})
+set(gca,'fontsize',16)
+xticks([0,0.03,0.1,0.2,0.4])
+xticklabels({'0','0.03','0.1','0.2','0.4'})
+axis([0,0.4,0,10e-5])
 
 %% Lysine and Isoleucine
 % Load data and calculate concentrations
@@ -384,7 +385,7 @@ plot(X,Y,'r:','linewidth',2)
 
 % Plote diffusion coefficients on figure
 figure(2)
-plot(0.1,D_L_l,'b.','markersize',15)
-plot(0.1,D_L_r,'b>','markersize',7)
-plot(0.1,D_I_l,'g.','markersize',15)
-plot(0.1,D_I_r,'g>','markersize',7)
+plot(0.1,D_L_l,'b.','markersize',20)
+plot(0.1,D_L_r,'b>','markersize',10)
+plot(0.1,D_I_l,'g.','markersize',20)
+plot(0.1,D_I_r,'g>','markersize',10)

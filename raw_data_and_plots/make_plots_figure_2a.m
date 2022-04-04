@@ -283,12 +283,12 @@ subplot(1,2,1)
 X = [min(DATA_L(:,2)),max(DATA_L(:,2))];
 Y = mdl_L.Coefficients{1,1} + mdl_L.Coefficients{2,1}.*X;
 plot(X,Y,'color',red,'linewidth',lw)
-text(0.1,20,strcat('R-squared:',num2str(round(mdl_L.Rsquared.Ordinary,3))),'fontsize',14)
+text(0.1,20,strcat('R^2:',num2str(round(mdl_L.Rsquared.Ordinary,3))),'fontsize',14)
 % Format Plot
 ylim([-1 120])
 title('Lysine')
 xlabel('OD 550')
-ylabel('Conc. uM')
+ylabel('Conc. [{\mu}M]')
 set(gca,'fontsize',16)
 set(gcf,'renderer','painters')
 
@@ -316,12 +316,12 @@ subplot(1,2,2)
 X = [min(DATA_I(:,2)),max(DATA_I(:,2))];
 Y = mdl_I.Coefficients{1,1} + mdl_I.Coefficients{2,1}.*X;
 plot(X,Y,'color',red,'linewidth',lw)
-text(0.5,100,strcat('R-squared:',num2str(round(mdl_I.Rsquared.Ordinary,3))),'fontsize',14)
+text(0.5,100,strcat('R^2:',num2str(round(mdl_I.Rsquared.Ordinary,3))),'fontsize',14)
 % Format Plot
 ylim([-20 1000])
 title('Isoleucine')
 xlabel('OD 450')
-ylabel('Conc. uM')
+ylabel('Conc. [{\mu}M]')
 set(gca,'fontsize',16)
 set(gcf,'renderer','painters')
 
@@ -344,11 +344,11 @@ for I = 1:6 %time points
     r_ind = I*2;
     for J = 1:3 %replicates
         % left well
-        plot(time(I),L_d_um(J,l_ind),'b.','markersize',10)
+        plot(time(I),L_d_um(J,l_ind),'b.','markersize',15)
         % right well
-        plot(time(I),L_d_um(J,r_ind),'r.','markersize',10)
+        plot(time(I),L_d_um(J,r_ind),'r.','markersize',15)
         % total
-        plot(time(I),L_d_um(J,l_ind)+L_d_um(J,r_ind),'k.','markersize',10)
+        plot(time(I),L_d_um(J,l_ind)+L_d_um(J,r_ind),'k.','markersize',15)
     end
 end
 % Plot means
@@ -358,13 +358,14 @@ m_L_d_um_right = m_L_d_um([2,4,6,8,10,12]);
 m_L_d_um_total = m_L_d_um_left+m_L_d_um_right;
 plot(time,m_L_d_um_left,'b:','linewidth',2)
 plot(time,m_L_d_um_right,'r:','linewidth',2)
-plot(time,m_L_d_um_total,'k:','linewidth',2)
+%plot(time,m_L_d_um_total,'k:','linewidth',2)
 % Format Plot
 title('Lysine')
 xlabel('Time [hours]')
-ylabel('Conc. [uM]')
+ylabel('Conc. [{\mu}M]')
 set(gca,'fontsize',16)
 set(gcf,'renderer','painters')
+xticks([0,1.5,3,6,12,24])
 
 % Isoleucine
 % Convert data to micro molar
@@ -382,11 +383,11 @@ for I = 1:6 %time points
     r_ind = I*2;
     for J = 1:3 %replicates
         % left well
-        plot(time(I),I_d_um(J,l_ind),'b.','markersize',10)
+        plot(time(I),I_d_um(J,l_ind),'b.','markersize',15)
         % right well
-        plot(time(I),I_d_um(J,r_ind),'r.','markersize',10)
+        plot(time(I),I_d_um(J,r_ind),'r.','markersize',15)
         % total
-        plot(time(I),I_d_um(J,l_ind)+I_d_um(J,r_ind),'k.','markersize',10)
+        plot(time(I),I_d_um(J,l_ind)+I_d_um(J,r_ind),'k.','markersize',15)
     end
 end
 % Plot means
@@ -396,12 +397,12 @@ m_I_d_um_right = m_I_d_um([2,4,6,8,10,12]);
 m_I_d_um_total = m_I_d_um_left+m_I_d_um_right;
 plot(time,m_I_d_um_left,'b:','linewidth',2)
 plot(time,m_I_d_um_right,'r:','linewidth',2)
-plot(time,m_I_d_um_total,'k:','linewidth',2)
+%plot(time,m_I_d_um_total,'k:','linewidth',2)
 % Format Plot
 title('Isoleucine')
 xlabel('Time [hours]')
-ylabel('Conc. [uM]')
+ylabel('Conc. [{\mu}M]')
 set(gca,'fontsize',16)
 set(gcf,'renderer','painters')
-
+xticks([0,1.5,3,6,12,24])
 

@@ -363,7 +363,7 @@ for I = 1:length(r.y)
     	pass(I) = 1;
     end
 end
-histogram(log10(r.y(pass==1)),'BinEdges',h.BinEdges,'normalization','pdf','facealpha',0.5,'facecolor','b','Orientation','horizontal')
+histogram(log10(r.y(pass==1)),'BinEdges',h.BinEdges,'normalization','pdf','facealpha',0.5,'facecolor',[0.9,0.75,0],'Orientation','horizontal')
 
 ylabel('log10(Leakage [mmol/g])')
 xlabel('Probability Density Function')

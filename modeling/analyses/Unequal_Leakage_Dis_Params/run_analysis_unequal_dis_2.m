@@ -378,7 +378,7 @@ figure(5)
 histogram(log10(r.yA1),'BinEdges',Xedges,'normalization','pdf','facealpha',0.5,'facecolor','k');
 % Plot histogram of all points for which ratio is within threshold
 hold on
-histogram(log10(r.yA1(pass==1)),'BinEdges',Xedges,'normalization','pdf','facealpha',0.5,'facecolor','b')
+histogram(log10(r.yA1(pass==1)),'BinEdges',Xedges,'normalization','pdf','facealpha',0.5,'facecolor',[0.9,0.75,0])
 xlabel('log10(Lys Leakage [mmol/g])')
 ylabel('Probability Density Function')
 
@@ -387,9 +387,10 @@ figure(6)
 histogram(log10(r.yA1),'BinEdges',Yedges,'normalization','pdf','facealpha',0.5,'facecolor','k','Orientation','horizontal');
 % Plot histogram of all points for which ratio is within threshold
 hold on
-histogram(log10(r.yA2(pass==1)),'BinEdges',Yedges,'normalization','pdf','facealpha',0.5,'facecolor','b','Orientation','horizontal')
+histogram(log10(r.yA2(pass==1)),'BinEdges',Yedges,'normalization','pdf','facealpha',0.5,'facecolor',[0.9,0.75,0],'Orientation','horizontal')
 ylabel('log10(Ile Leakage [mmol/g])')
 xlabel('Probability Density Function')
+xlim([0 1.2])
 
 %% Format Plots
 fs = 10;
