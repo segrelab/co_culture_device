@@ -15,4 +15,6 @@ This repository contains code and data related to the BioMe device.
 
 /modeling/model - This directory contains the code for the computational model used in this work, written as a MATLAB function.
 
+/online_supplement - This directory contains all of the online supplemental figures and captions
+
 /raw_data_and_plots - This directory contains all of the raw data and MATLAB scripts for generating all of the plots in the figures.
